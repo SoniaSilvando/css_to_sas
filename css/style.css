@@ -1,0 +1,587 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: #e7cbf3; 
+    color: black;
+}
+:is(h1, h2, h3) {
+    color: #a86c3f;
+    font-family: Arial, sans-serif;
+}
+
+#wrapper {
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50px auto auto;
+    grid-template-areas:
+        "header"
+        "menu"
+        "content"
+        "footer";
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    justify-content: space-between; /* Espacia los elementos */
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo + título en una misma línea */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre logo y título */
+}
+
+/* Ajustar el tamaño del logo */
+.logo-container img {
+    width: 70px; /* Tamaño ajustado */
+    height: auto;
+}
+
+/* Estilos del título */
+.logo-container h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navegación en la misma línea */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav ul .active {
+    color: #a86c3f;
+    font-weight: bold;
+}
+
+/* Hero - Imagen grande */
+.hero {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+/* Sección de texto + imágenes alineadas */
+.text-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacia los elementos */
+    margin-top: 20px;
+    gap: 30px; 
+}
+
+/* Estilo del texto */
+.text-below {
+    width: 40%; /* Reduce el ancho del texto */
+    max-width: 400px;
+    text-align: left;
+}
+
+/* Galería de imágenes alineadas */
+.image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 60%;
+}
+
+/* Imágenes con estilos */
+.image-grid img {
+    width: 100%;
+    max-width: 230px; /* Tamaño uniforme */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en imágenes */
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón debajo del texto */
+.shop-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+
+#article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+.section {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.section:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+.section img {
+    width: 100%;
+    height: auto;
+}
+.img-hover-effect {
+    transition: transform 0.3s ease;   
+}
+
+.img-hover-effect:hover {
+    transform: scale(1.1);
+}
+.promotion {
+    color: red; 
+    font-family: Arial, sans-serif; 
+    font-size: 18px; 
+    font-style: italic; 
+    text-align: left;
+}
+/*___________________________room_______________________*/
+/*___________________________table_______________________*/
+.styled-table { border-collapse: collapse; margin: 25px 0; font-size:
+    1em; font-family: sans-serif; min-width: 450px; box-shadow: 0 0 20px
+    rgba(0, 0, 0, 0.15); }
+
+.styled-table thead tr { background-color: #980081; color: #ffffff; text-align: middle; }
+.styled-table th, .styled-table td { padding: 12px 15px; }
+.styled-table tbody tr { border-bottom: 1px solid #dddddd; }
+styled-table tbody tr:nth-of-type(even) { background-color: #f3f3f3; }
+.styled-table tbody tr:last-of-type { border-bottom: 2px solid #009879; }
+
+/*___________________________table_______________________*/
+#room {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 4%;
+}
+.big-section {
+    grid-column: 1 / span 2; /* Span 2 columns */
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.big-section h2 {
+    margin-bottom: 10px;
+    text-align: left;
+}
+.big-section img {
+    width: 100%;
+    height: auto;
+}
+.big-section p{
+    text-align: left;
+}
+.small-section {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    position: relative;
+}
+.small-section img {
+    width: 90%;
+    height: auto;
+}
+/*___________________________room_______________________*/
+/*___________________________Product_____________________*/
+#product {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    justify-content: flex-start;
+    padding: 5%;
+}
+
+.big-section-product img {
+    width: 95%;
+    height: auto;
+    background-color: #f9f9f9; 
+    border-radius: 7px;
+}
+
+.small-section-product img {
+    width: 30%;
+    height: auto;
+    margin-right: 2%;
+    margin-top: 1%; 
+}
+
+.product-descripcion {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: flex-start;
+    padding: 20px;
+    font-size: large;       
+}
+
+.button-produc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.button-produc img {
+    width: 50px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.button-produc button {
+    
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ddd;
+        color: #333;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 15px;
+    
+     
+}
+
+.button-produc button:hover {
+    background-color: #7B68EE; 
+}
+/*___________________________Product_____________________*/
+/*___________________________Cart_____________________*/
+.product-descripcion p {
+    margin-bottom: 0px; 
+}
+.product-descripcion h3 {
+    margin-right: 5px; 
+}
+ 
+.small-section-cart{
+    width: 100%;
+    background-color: #f9f9f9; 
+    border-radius: 5px; 
+    
+}
+.small-section-cart img {
+    border-radius: 10px
+}
+
+
+/*___________________________Cart_____________________*/
+
+/*_______________________form_____________________*/
+
+
+form {
+    width: 100%; /* Hace que el formulario sea más grande */
+    max-width: 800px; /* Máximo tamaño */
+    padding: 20px; /* Más espacio interno */
+}
+
+input:enabled {
+    border: 2px solid #7B68EE; /* Morado elegante */
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* 2️⃣ Estilo para inputs deshabilitados */
+input:disabled {
+    border: 2px solid #ccc;
+    background-color: #f3f3f3;
+    color: gray;
+    cursor: not-allowed;
+}
+
+/* 3️⃣ Estilo para checkboxes marcados */
+input:checked {
+    outline: 2px solid #ff00bb;
+    background-color: #ff0080;
+}
+
+/* 4️⃣ Estilo para campos válidos e inválidos */
+input:valid {
+    border: 2px solid #4CAF50; /* Verde para datos correctos */
+}
+
+input:invalid {
+    border: 2px solid #D92525; /* Rojo para errores */
+    background-color: #FFE5E5;
+}
+
+/* 5️⃣ Estilo para valores dentro y fuera del rango */
+input:in-range {
+    border: 2px solid #4CAF50; /* Verde */
+}
+
+input:out-of-range {
+    border: 2px solid #D92525; /* Rojo */
+    background-color: #FFE5E5;
+}
+
+/* 6️⃣ Estilo para campos requeridos y opcionales */
+input:required {
+    border-left: 4px solid hwb(163 0% 0%); /* Amarillo */
+}
+
+input:optional {
+    border-left: 4px solid #cb00d6; /* Gris */
+}
+
+/* 7️⃣ Estilo para inputs de solo lectura */
+input:read-only {
+    background-color: #f9f9f9;
+    color: hwb(294 31% 35%);
+}
+
+
+
+/* 9️⃣ Estilo para resaltar el formulario cuando se accede con #theForm */
+#theForm:target {
+    border: 3px solid #7B68EE;
+    box-shadow: 0 0 10px rgba(123, 104, 238, 0.5);
+}
+
+
+/*______________________form______________________*/
+
+/*______________________blog______________________*/
+#main-blog {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.article-blog {
+    margin-top: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+
+}
+
+.article-blog h3 {
+    font-size: 22px;
+    color: #222;
+}
+
+.article-blog p {
+    font-size: 16px; 
+    color: #666;
+}
+.article-blog p:first-of-type::first-letter {
+    font-size: 2.5rem;  
+    color: #a86c3f;   
+    font-weight: bold; 
+    float: initial;      
+    margin-right: 2px; 
+}
+
+.related-articles {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.related-articles h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.related-articles ul {
+    list-style: none;
+    padding: 0;
+}
+
+.related-articles ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.comments-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.comments-section textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.comments-section button {
+    margin-top: 10px;
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comments-section button:hover {
+    background: #0056b3;
+}
+
+/*______________________quote______________________*/
+blockquote {
+    position: relative;
+    font-style: italic;
+    color: #444;
+    padding: 20px;
+    margin: 80px 0;
+    background: #f9f9f9;
+    border-left: 5px solid #a86c3f;
+}
+
+blockquote::before {
+    content: "  “  ";
+    font-size: 4rem;
+    color: #a86c3f;
+    position: absolute;
+    left: -2px;
+    top: -32px;
+}
+
+blockquote::after {
+    content: "”";
+    font-size: 4rem;
+    color: #a86c3f;
+    position: absolute;
+    right: 20px;
+    bottom: -71px;
+}
+
+/*______________________quote______________________*/
+
+
+/*______________________about_____________________*/
+
+
+#about p::first-line{
+    font-weight: bold;
+}
+
+
+
+/*_____________________about______________________*/
+
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-box {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 10px;
+    }
+    nav ul {
+        padding: 0; /*this padding is makink visible and in the correct position my menu*/
+    }
+    
+    .article-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .section {
+        padding: 10px;
+    }
+
+       footer {
+        padding: 10px;
+    }
+}
+/*
+   Copyright  [2024] [Sonia Silva]
+   Permission is hereby granted, free of charge, to any person obtaining a copy of this web..
+*/
+
+
+
+
+
+
+
+
+
+
